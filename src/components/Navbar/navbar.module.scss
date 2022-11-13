@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 3rem;
 
     .brand {
       display: flex;
@@ -26,7 +26,7 @@
         list-style: none;
       }
 
-      @include breakpoint(lg) {
+      @include breakpoint(md) {
         display: none;
       }
     }
@@ -45,7 +45,7 @@
     }
 
     .btn {
-      @include breakpoint(lg) {
+      @include breakpoint(md) {
         display: none;
       }
     }
@@ -55,7 +55,7 @@
       cursor: pointer;
       z-index: 1;
 
-      @include breakpoint(lg) {
+      @include breakpoint(md) {
         display: block;
         font-size: 30px;
       }

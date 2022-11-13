@@ -7,13 +7,20 @@
   }
 
   @if $point == md {
+    // 920px
+    @media (max-width: 58em) {
+      @content;
+    }
+  }
+
+  @if $point == sm {
     // 720px
     @media (max-width: 45em) {
       @content;
     }
   }
 
-  @if $point == sm {
+  @if $point == xs {
     // 544px
     @media (max-width: 34em) {
       @content;

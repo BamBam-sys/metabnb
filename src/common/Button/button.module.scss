@@ -4,7 +4,12 @@
   line-height: 19.98px;
   padding: 1.5rem 2.7rem;
   color: #fff;
-  background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+  background: #a02279;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+  &:hover {
+    background: #76226c;
+  }
 }

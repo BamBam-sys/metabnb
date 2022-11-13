@@ -27,11 +27,11 @@ body {
   color: #434343;
   overflow-x: hidden;
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     font-size: 56.25%;
   }
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     font-size: 50%;
   }
 }

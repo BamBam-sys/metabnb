@@ -1,0 +1,122 @@
+@import '../../sass/mediaQueries.scss';
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  padding-top: 8rem;
+
+  @include breakpoint(md) {
+    grid-template-columns: 1fr;
+    padding-top: 6rem;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .text {
+    padding-top: 3.7rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+
+    @include breakpoint(md) {
+      gap: 2.4rem;
+      justify-items: center;
+    }
+
+    h1 {
+      font-size: 4.8rem;
+      font-weight: 400;
+
+      @include breakpoint(md) {
+        width: 90%;
+      }
+
+      @include breakpoint(sm) {
+        width: 95%;
+      }
+
+      span {
+        font-weight: 700;
+        color: #a02279;
+      }
+    }
+
+    p {
+      font-size: 2.4rem;
+
+      @include breakpoint(md) {
+        width: 70%;
+      }
+
+      @include breakpoint(sm) {
+        width: 85%;
+      }
+    }
+
+    .search {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(md) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      input {
+        width: 60%;
+        padding: 1.6rem 1.5rem;
+        flex: 1;
+        font-family: inherit;
+        font-size: 1.6rem;
+        outline: none;
+        border: 1px solid #a3a3a3;
+        border-radius: 8px 0px 0px 8px;
+        transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        &:focus {
+          border: 1px solid #76226c;
+        }
+
+        &::placeholder {
+          color: #b8b8b8;
+          font-size: 1.4rem;
+          font-family: inherit;
+        }
+
+        @include breakpoint(md) {
+          border-radius: 8px;
+        }
+
+        @include breakpoint(sm) {
+          width: 80%;
+        }
+      }
+
+      button {
+        padding: 1.7rem 6.7rem;
+        font-size: 1.6rem;
+        color: #fff;
+        background: #a02279;
+        border: none;
+        border-radius: 0px 8px 8px 0px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        &:hover {
+          background: #76226c;
+        }
+
+        @include breakpoint(md) {
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .img {
+    @include breakpoint(md) {
+      align-self: center;
+    }
+  }
+}
