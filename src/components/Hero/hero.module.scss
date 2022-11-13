@@ -3,8 +3,8 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
-  padding-top: 8rem;
+  gap: 10rem;
+  padding: 8rem 0;
 
   @include breakpoint(md) {
     grid-template-columns: 1fr;
@@ -115,8 +115,11 @@
     }
   }
   .img {
+    justify-self: end;
+
     @include breakpoint(md) {
-      align-self: center;
+      justify-self: center;
+      transform: scale(1.1);
     }
   }
 }

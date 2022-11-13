@@ -4,7 +4,7 @@ import { ReactComponent as Img } from '../../assets/hero-img.svg';
 
 const Hero = () => {
   return (
-    <div className={styles.hero}>
+    <div className={`${styles.hero} container`}>
       <div className={styles.text}>
         <h1>
           Rent a <span>Place</span> away from <span>Home</span> in the{' '}

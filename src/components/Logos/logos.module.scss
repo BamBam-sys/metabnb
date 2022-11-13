@@ -1,0 +1,17 @@
+@import '../../sass/mediaQueries.scss';
+
+.logos {
+  display: flex;
+  background: #a02279;
+  align-items: center;
+  justify-content: center;
+  column-gap: 26.4rem;
+  row-gap: 1rem;
+  padding: 1.5rem 6.2rem;
+  & > * {
+    width: 18rem;
+  }
+  @include breakpoint(md) {
+    flex-direction: column;
+  }
+}
