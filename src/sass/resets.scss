@@ -25,6 +25,7 @@ body {
   font-size: 62.5%;
   font-family: 'Red Rose', cursive;
   color: #434343;
+  overflow-x: hidden;
 
   @include breakpoint(md) {
     font-size: 56.25%;
