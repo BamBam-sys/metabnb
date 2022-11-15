@@ -1,4 +1,4 @@
-import { CallToAction, Hero, Homes, Logos } from '../../components';
+import { CallToAction, Footer, Hero, Homes, Logos } from '../../components';
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <Logos />
       <Homes />
       <CallToAction />
+      <Footer />
     </div>
   );
 };

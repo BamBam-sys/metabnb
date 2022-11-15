@@ -1,0 +1,60 @@
+@import '../../sass/mediaQueries.scss';
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding-top: 6.3rem;
+  padding-bottom: 3.7rem;
+  font-size: 1.4rem;
+
+  .content {
+    max-width: 116rem;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 7rem;
+    column-gap: 10rem;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint(xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & > * {
+        display: flex;
+        gap: 3.6rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    .community,
+    .places,
+    .about {
+      //   justify-self: end;
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 2.3rem;
+    }
+  }
+  .copy {
+    max-width: 116rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
