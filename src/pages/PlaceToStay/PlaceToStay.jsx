@@ -4,7 +4,7 @@ import data from '../../data.json';
 import { Card } from '../../common';
 import { IoMenu, IoClose } from 'react-icons/io5';
 import { useState } from 'react';
-import styles from './placeToStay.module.scss';
+import styles from './place.module.scss';
 
 const PlaceToStay = () => {
   const [dropDown, setDropDown] = useState(false);
