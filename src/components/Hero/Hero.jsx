@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './hero.module.scss';
-import { ReactComponent as Img } from '../../assets/hero-img.svg';
+import heroImg from '../../assets/hero-img.png';
 
 const Hero = () => {
   return (
@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={styles.img}>
-        <Img />
+        <img src={heroImg} alt="NFTs" />
       </div>
     </div>
   );
