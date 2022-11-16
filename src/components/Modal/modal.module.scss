@@ -1,0 +1,72 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  width: 95%;
+  background: #fff;
+  color: #333333;
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  z-index: 2;
+
+  .header {
+    padding: 2.4rem 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cfd8dc;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 29.98px;
+    }
+
+    .closeIcon {
+      font-size: 3rem;
+      cursor: pointer;
+    }
+  }
+
+  .wallets {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    p {
+      font-size: 1.6rem;
+      line-height: 20px;
+    }
+
+    .wallet {
+      position: relative;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.8rem;
+      font-family: 'Sora', sans-serif;
+      border: 1px solid #cfd8dc;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      &:hover {
+        background: #f8f9fa;
+      }
+
+      .forwardIcon {
+        position: absolute;
+        right: 2.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #959da6;
+      }
+    }
+  }
+}

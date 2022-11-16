@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/brand-logo.svg';
@@ -8,8 +9,14 @@ import { IoMenu, IoClose } from 'react-icons/io5';
 
 import styles from './navbar.module.scss';
 
-const Navbar = () => {
+const Navbar = ({ handleModal }) => {
   const [mobileNav, setMobileNav] = useState(false);
+
+  useEffect(() => {
+    !mobileNav
+      ? (document.body.style.overflowY = 'scroll')
+      : (document.body.style.overflowY = 'hidden');
+  }, [mobileNav]);
 
   return (
     <div className={`${styles.navbar}`}>
@@ -40,7 +47,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className={styles.btn}>
+        <div className={styles.btn} onClick={() => handleModal()}>
           <Button text="Connect Wallet" />
         </div>
         <div
@@ -74,7 +81,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className={styles.btn}>
+          <div className={styles.btn} onClick={() => handleModal()}>
             <Button text="Connect Wallet" />
           </div>
         </div>
