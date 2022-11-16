@@ -1,0 +1,99 @@
+@import '../../sass/mediaQueries.scss';
+
+.placeToStay {
+  padding: 9.2rem 0;
+
+  .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6.5rem;
+    font-size: 2rem;
+    line-height: 24px;
+    transition: all 0.4s ease;
+
+    span {
+      cursor: pointer;
+    }
+
+    span:hover {
+      color: #a02279;
+    }
+
+    .links {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    .icon {
+      cursor: pointer;
+      font-size: 3rem;
+      display: none;
+
+      @include breakpoint(md) {
+        display: block;
+      }
+    }
+
+    .mobileLinks {
+      display: none;
+
+      @include breakpoint(md) {
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 4rem;
+        background: #fff;
+        box-shadow: 1px 1px 10px 5px hsla(0, 0%, 95%, 0.25);
+        border-radius: 8px;
+        z-index: 1;
+
+        span {
+          border-bottom: 1px solid #ebebeb;
+          padding: 1.6rem;
+        }
+
+        span:nth-child(7) {
+          border: none;
+        }
+      }
+    }
+
+    .setting {
+      font-size: 1.6rem;
+      line-height: 19px;
+      color: #333;
+      padding: 1.2rem 1.6rem 1.2rem 1.3rem;
+      border: 1px solid #b4b4b4;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      cursor: pointer;
+    }
+  }
+
+  .cards {
+    margin-top: 6.4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(xs) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
